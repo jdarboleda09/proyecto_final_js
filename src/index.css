@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --accent: #e63946;
+  --dark-bg: #0d0d0d;
+  --card-bg: rgba(255, 255, 255, 0.12);
+}
+
+body {
+  background-color: var(--dark-bg);
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.82),
+      rgba(0, 0, 0, 0.82)),
+    url("https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=1600&q=80");
+  background-repeat: repeat;
+  background-size: auto;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* ── Navbar ── */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-link {
+  position: relative;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Carousel ── */
+.carousel-item img {
+  object-fit: contain;
+  height: 600px;
+}
+
+/* ── Cards ── */
+.card-modern {
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+
+.card-modern:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 28px rgba(230, 57, 70, 0.25);
+}
+
+/* ── Footer icons ── */
+.footer-icon {
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+}
+
+.footer-icon.whatsapp:hover  { color: #25D366 !important; }
+.footer-icon.facebook:hover  { color: #1877F2 !important; }
+.footer-icon.instagram:hover { color: #c63565 !important; }
+
+/* ── Accent button ── */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background-color: #c1121f;
+  border-color: #c1121f;
+}
+
+/* ── Divider accent ── */
+.accent-line {
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 0 auto 1.2rem;
+  border-radius: 2px;
+}
+
+/* ── Tienda ── */
+.store-hero {
+  background: linear-gradient(135deg,
+    rgba(230, 57, 70, 0.15) 0%,
+    rgba(0, 0, 0, 0) 60%),
+    linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  border-bottom: 1px solid rgba(230, 57, 70, 0.25);
+}
+
+.store-search .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.store-search .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.25);
+  border-color: var(--accent);
+}
+
+.card-modern .badge {
+  font-size: 0.72rem;
+}
